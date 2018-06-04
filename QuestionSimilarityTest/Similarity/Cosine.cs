@@ -16,8 +16,8 @@ namespace QuestionSimilarityTest.Similarity
         /// <returns>Any float number between 0 if the questions are totally different or 1 if the questions are identical.</returns>
         public double Run(string questionOne, string questionTwo)
         {
-            var questionOneWords = questionOne.ExtractWords();
-            var questionTwoWords = questionTwo.ExtractWords();
+            var questionOneWords = questionOne.ExtractShingles();
+            var questionTwoWords = questionTwo.ExtractShingles();
 
             var uniqueWords = questionOneWords
                 .Union(questionTwoWords)
